@@ -992,7 +992,6 @@ function mouseMove(event) {
 
     gsap.to(this.querySelector('.page12-nav1-img'), {
         left: imgX,
-        y:30,
         top: mouseY,
         transition: "all ease 0.2s",
     });
