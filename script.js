@@ -34,6 +34,7 @@ document.addEventListener("mousemove", function (event) {
     gsap.to("#follow", {
         left: followX,
         top: followY,
+        skew:true
     })
     xValue.textContent = "X . " + mouseX;
     yValue.textContent = "Y . " + mouseY;
@@ -970,8 +971,10 @@ gsap.to(".page12-animation-line-element",{
 var page12Navs = document.querySelectorAll(".page12-nav");
 
 function mouseMove(event) {
+    var extra = this.getBoundingClientRect();
+
     var mouseX = event.clientX;
-    var mouseY = event.clientY - 150;
+    var mouseY = event.clientY - extra;
     var imgWidth = this.querySelector('.page12-nav1-img').offsetWidth;
     var imgX = mouseX - (imgWidth / 2);
     var imgY = mouseY - 180;
@@ -989,6 +992,7 @@ function mouseMove(event) {
 
     gsap.to(this.querySelector('.page12-nav1-img'), {
         left: imgX,
+        y:30,
         top: mouseY,
         transition: "all ease 0.2s",
     });

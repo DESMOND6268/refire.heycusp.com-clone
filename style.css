@@ -6,7 +6,9 @@
     color: white;
 
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 ::selection {
     color: white;
     background: #A59E99;
@@ -1282,7 +1284,6 @@ main {
 .page6-card-news-container{
     height: 6vh;
     width: 19vh;
-    /* background-color: #fff; */
     border-radius: 50px;
     background-color: rgba(128, 128, 128, 0.3);
     transition: cubic-bezier(0.3, 0.7, 1.0, 0.1);
@@ -1292,11 +1293,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 23px;
 }
 
-.page6-card-news-container a{
+.page6-card-news-container p{
     text-decoration: none;
     font-size: 12px;
+    color: white;
+    cursor: pointer;
 }
 
 .page6-card-bottom-nav{
